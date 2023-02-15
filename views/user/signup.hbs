@@ -1,0 +1,21 @@
+<h2>Sign up</h2>
+
+    {{#if mensajeError}}
+        <div class="alert alert-danger" role="alert">
+            {{mensajeError}}
+        </div>
+    {{/if}}
+
+<form action="/user/signup" method="POST">
+<label for="username">Username</label>
+<input type="text" id="username" name="username">
+<label for="password">Password</label>
+<input type="password" id="password" name="password">
+<label for="passwordRepeat">Repeat password</label>
+<input type="password" id="passwordRepeat" name="passwordRepeat">
+
+<button type="submit">Sign up</button>
+<a href="/user/login">I'm already signed up</a>
+<a href="/user">Go to the home page</a>
+
+</form>

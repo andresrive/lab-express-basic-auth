@@ -1,0 +1,18 @@
+<h2>Log in</h2>
+
+    {{#if mensajeError}}
+        <div class="alert alert-danger" role="alert">
+            {{mensajeError}}
+        </div>
+    {{/if}}
+
+<form action="/user/login" method="POST">
+<label for="username">Username</label>
+<input type="text" id="username" name="username">
+<label for="password">Password</label>
+<input type="password" id="password" name="password">
+
+<button type="submit">Log in</button>
+<a href="/user/signup">I'm not signed up</a>
+
+</form>
