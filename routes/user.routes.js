@@ -81,7 +81,7 @@ router.post("/login", isLoggedOut, (req, res, next) => {
 })
 
 router.get("/profile", (req, res, next) => {
-  res.render("user/profile")
+  res.render("user/profile", { username: req.session.currentUser })
 })
 
 router.get("/main", isLoggedOut, (req, res, next) => {
